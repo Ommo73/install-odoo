@@ -72,7 +72,7 @@ RUN apt-get update \
     && pip install --no-cache-dir -r https://raw.githubusercontent.com/odoo/odoo/${ODOO_BRANCH}/requirements.txt \
     && pip install --no-cache-dir -r https://raw.githubusercontent.com/it-projects-llc/saas-addons/${ODOO_BRANCH}/requirements.txt \
     && pip install --no-cache-dir -r https://raw.githubusercontent.com/it-projects-llc/misc-addons/${ODOO_BRANCH}/requirements.txt \
-    && python3 -m compileall -q /usr/local/lib/python3.5/ || true \
+    && python3 -m compileall -q /usr/local/lib/python3.6/ || true \
     && apt-get purge -yqq build-essential '*-dev' \
     && apt-mark -qq manual '*' \
     && rm -Rf /var/lib/apt/lists/*
